@@ -1,2 +1,2 @@
 
-web: gunicorn django_vue.wsgi --log-file -
+web: gunicorn djnago_vue.wsgi --log-file -
