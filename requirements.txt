@@ -96,7 +96,6 @@ gunicorn==19.9.0
 html5lib==1.0.1
 httplib2==0.11.3
 humanize==0.5.1
-hyperlink==18.0.0
 idna==2.6
 imagesize==1.0.0
 include==0.2.1
