@@ -106,18 +106,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_URL = 'dist/static/'
 
 
-STATICFILES_DIRS = [
-  os.path.join(BASE_DIR, 'dist/static'),
-]
+
 # try:
 #     from local_settings import *
 # except ImportError:
 #     pass
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_TMP = os.path.join(BASE_DIR, 'dist/static/')
+STATIC_URL = 'dist/static/'
+os.makedirs(STATIC_TMP, exist_ok=True)
+os.makedirs(STATIC_ROOT, exist_ok=True)
+
+STATICFILES_DIRS = [
+  os.path.join(BASE_DIR, 'dist/static'),
+]
