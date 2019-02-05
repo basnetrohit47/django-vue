@@ -20,14 +20,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'q-854_)a)%0e%nqsz-tonb$51(0zsw0k8x6li=7ub!y=mrxrir'
+# SECRET_KEY = 'q-854_)a)%0e%nqsz-tonb$51(0zsw0k8x6li=7ub!y=mrxrir'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 SECRET_KEY = os.environ['SECRET_KEY']
-
+#
 ['awesome-valley.herokuapp.com', 'localhost']
-
+#
 
 # Application definition
 
@@ -118,7 +118,7 @@ USE_TZ = True
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'dist/static/')
 STATIC_TMP = os.path.join(BASE_DIR, 'dist/static/')
 STATIC_URL = 'dist/static/'
 os.makedirs(STATIC_TMP, exist_ok=True)
