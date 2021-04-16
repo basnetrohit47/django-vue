@@ -46,7 +46,7 @@ django-countries==4.6.1
 django-countries-plus==1.2.1
 django-crispy-forms==1.6.0
 django-debug-panel==0.8.3
-django-debug-toolbar==1.9.1
+django-debug-toolbar==1.11.1
 django-easy-avatar==0.1
 django-embed-video==1.1.2
 django-extensions==1.7.6
